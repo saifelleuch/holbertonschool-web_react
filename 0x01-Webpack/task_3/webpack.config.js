@@ -13,6 +13,10 @@ module.exports = {
     static: path.join(__dirname, './public'),
     port: 8564,
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
