@@ -9,3 +9,6 @@ export const getFooterCopy = (isIndex) => {
    : (returned = 'Holberton School main dashboard');
   return returned;
 };
+
+export const getLatestNotification = () =>
+  '<strong>Urgent requirement</strong> - complete by EOD';
