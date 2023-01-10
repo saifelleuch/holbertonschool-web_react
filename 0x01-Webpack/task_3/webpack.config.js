@@ -10,8 +10,10 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
+    static: path.join(__dirname, './public'),
     port: 8564,
   },
+  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
