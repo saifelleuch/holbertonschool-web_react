@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@cfaester/enzyme-adapter-react-18": "^0.6.0",
     "css-loader": "^6.7.3",
     "image-webpack-loader": "^8.1.0",
     "style-loader": "^3.3.1",
@@ -7,6 +8,8 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "@babel/core": "^7.20.12",
+    "enzyme": "^3.11.0",
     "inline-source-map": "^0.6.2",
     "jquery": "^3.6.3"
   }
