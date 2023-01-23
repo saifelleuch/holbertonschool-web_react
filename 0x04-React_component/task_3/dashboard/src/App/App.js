@@ -6,6 +6,8 @@ import Notifications from '../Notifications/Notifications';
 import CourseList from '../CourseList/CourseList';
 import PropTypes from 'prop-types';
 import { getLatestNotification } from '../utils/utils';
+import BodySection from '../BodySection/BodySection';
+import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
 
 class App extends Component {
   constructor(props) {
@@ -41,7 +43,18 @@ class App extends Component {
       <Fragment>
         <Notifications listNotifications={listNotifications} />
         <Header />
-        {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
+        {isLoggedIn ? (
+          <BodySectionWithMarginBottom title='Course list'>
+            <CourseList listCourses={listCourses} />
+          </BodySectionWithMarginBottom>
+        ) : (
+          <BodySectionWithMarginBottom title='Log in to continue'>
+            <Login />
+          </BodySectionWithMarginBottom>
+        )}
+        <BodySection title='News from the School'>
+          <p>paragraph with some random text</p>
+        </BodySection>
         <Footer />
       </Fragment>
     );
