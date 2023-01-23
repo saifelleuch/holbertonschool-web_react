@@ -1,12 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-CourseListRow.propTypes = {
-  isHeader: PropTypes.bool,
-  textFirstCell: PropTypes.string.isRequired,
-  textSecondCell: PropTypes.string,
-};
-
 const CourseListRow = ({ isHeader, textFirstCell, textSecondCell }) => {
     let tr = undefined;
   
@@ -37,6 +31,12 @@ const CourseListRow = ({ isHeader, textFirstCell, textSecondCell }) => {
 CourseListRow.defaultProps = {
     isHeader: false,
     textSecondCell: null,
+};
+
+CourseListRow.propTypes = {
+  isHeader: PropTypes.bool,
+  textFirstCell: PropTypes.string.isRequired,
+  textSecondCell: PropTypes.string,
 };
 
 export default CourseListRow;
