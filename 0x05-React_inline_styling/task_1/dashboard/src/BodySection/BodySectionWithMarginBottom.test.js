@@ -1,8 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import BodySectionWithMarginBottom from './BodySectionWithMarginBottom';
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe('<BodySectionWithMarginBottom />', () => {
+  beforeAll(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+  
   it('test component and props', () => {
     const wrapper = shallow(
       <BodySectionWithMarginBottom title='test title'>

@@ -1,8 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
+import { StyleSheetTestUtils } from 'aphrodite';
 
 const wrapper = shallow(<App />);
+
+beforeAll(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
 
 it('renders without crashing', () => {
   shallow(<App />);
