@@ -9,7 +9,7 @@ const printBestStudents = (object) => {
 
   const formatName = (name) => name.charAt(0).toUpperCase() + name.slice(1);
 
-  Object.keys(student).map((key) => {
+  Object.keys(theStudent).map((key) => {
     theStudent[key].firstName = formatName(theStudent[key].firstName);
     theStudent[key].lastName = formatName(theStudent[key].lastName);
     return theStudent[key];
